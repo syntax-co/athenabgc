@@ -1,13 +1,22 @@
 // app/layout.js
 import "./globals.css";
+import { Montserrat_Alternates, Raleway } from "next/font/google";
+
+// ✅ Use next/font to avoid the warning about custom fonts
+const montserrat = Montserrat_Alternates({
+  subsets: ["latin"],
+  variable: "--font-montserrat-alt",
+  display: "swap",
+});
+const raleway = Raleway({
+  subsets: ["latin"],
+  variable: "--font-raleway",
+  display: "swap",
+});
 
 export const metadata = {
   title: "Athena Gaming Cafe",
   description: "",
-  // Point metadataBase to your Pages site root
-  // For user/org root site: https://username.github.io
-  // For project pages: https://username.github.io/repo-name
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://syntax-co.github.io/athenabgc"),
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -21,18 +30,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scrollbar-minimal">
+    <html
+      lang="en"
+      className={`scrollbar-minimal ${montserrat.variable} ${raleway.variable}`}
+    >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-          rel="stylesheet"
-        />
+        {/* next/font handles font loading; no need for <link> tags */}
       </head>
       <body className="antialiased bg-primary">{children}</body>
     </html>
