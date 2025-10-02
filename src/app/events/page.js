@@ -70,7 +70,7 @@ export default function EventsPage() {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 pt-24 sm:pt-12 md:py-16">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-display tracking-tight">Events & Calendar</h1>
               <p className="mt-3 text-gray-300 max-w-2xl text-sm sm:text-base">
-                See what's happening at Athena—tournaments, open play, RPG one-shots, and more.
+                See what@aposs happening at Athena—tournaments, open play, RPG one-shots, and more.
               </p>
               <div className="mt-5 sm:mt-6 flex flex-col sm:flex-row gap-2 sm:gap-3">
                 
