@@ -71,10 +71,10 @@ const Header = () => {
                 >
 
                 </Link>
-                <a href="/" className="text-xl font-display text-background ml-3">
+                <Link href="/" className="text-xl font-display text-background ml-3">
                     ABGC
                     <div className="w-full h-[1px] bg-white"/>
-                </a>
+                </Link>
                 
                 <nav className="hidden md:flex items-center gap-2 font-primary text-background ml-auto">
                     {Object.keys(navitems).map((item,dex) => {
