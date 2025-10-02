@@ -12,7 +12,7 @@ import React from "react";
 
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || 'http://localhost:3000'
-console.log(BASE)
+console.log(process.env.NEXT_PUBLIC_BASE_PATH)
 
 
 const hours = [
