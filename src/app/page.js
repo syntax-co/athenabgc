@@ -11,7 +11,7 @@ import React from "react";
 // - Replace Unsplash photos with your own when ready (credit photographers as needed on your site).
 
 
-BASE = process.env.NEXT_PUBLIC_BASE_PATH || 'http://localhost:3000'
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || 'http://localhost:3000'
 
 
 
