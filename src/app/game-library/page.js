@@ -2,7 +2,6 @@ import GameLibrary from "@/components/game-libary/GameLibrary";
 import Header from "@/components/header";
 
 
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH || 'http://localhost:3000'
 
 
 const Libary = () => {
