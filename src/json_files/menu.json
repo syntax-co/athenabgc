@@ -1,0 +1,59 @@
+[
+  {
+    "id": "appetizers",
+    "label": "Appetizers",
+    "items": [
+      { "name": "Guac & Pico", "price": 12.0, "desc": "Guacamole and pico de gallo with tortilla chips." },
+      { "name": "Pita & Hummus", "price": 9.0, "desc": "Creamy hummus with warm pita." },
+      { "name": "Cheese Quesadilla", "price": 8.0, "desc": "Melted cheese in a grilled flour tortilla." },
+      { "name": "Popcorn Bowl", "price": 4.0, "desc": "Freshly popped and shareable." }
+    ]
+  },
+  {
+    "id": "warm-bites",
+    "label": "Warm Bites",
+    "items": [
+      { "name": "Pretzel Bites", "price": 4.0, "desc": "Warm, soft pretzel bites." },
+      { "name": "Tequeños", "price": 6.0, "desc": "Savory dough wrapping warm, melty cheese." },
+      { "name": "Turkey Taters", "price": 6.0, "desc": "Turkey meatballs and tater tots with BBQ sauce." }
+    ]
+  },
+  {
+    "id": "sandwiches",
+    "label": "Sandwiches",
+    "subtitle": "Served with chips and coleslaw",
+    "items": [
+      { "name": "Seasoned Grilled Cheese", "price": 11.0, "desc": "Blend of Gouda and Muenster, with oregano and olive oil." },
+      { "name": "Pesto Turkey & Muenster", "price": 11.5, "desc": "Honey roasted turkey, Muenster, and pesto mayo." }
+    ]
+  },
+  {
+    "id": "hot-drinks",
+    "label": "Hot Drinks",
+    "items": [
+      { "name": "Espresso", "price": 3.5, "desc": "" },
+      { "name": "Americano", "price": 3.5, "desc": "" },
+      { "name": "Latte", "price": 5.0, "desc": "" },
+      { "name": "Cappuccino", "price": 5.0, "desc": "" },
+      { "name": "Matcha Latte", "price": 4.0, "desc": "" },
+      { "name": "Twinnings® Tea", "price": 2.5, "desc": "" },
+      { "name": "Hot Chocolate", "price": 4.0, "desc": "" }
+    ]
+  },
+  {
+    "id": "cold-drinks",
+    "label": "Cold Drinks",
+    "items": [
+      { "name": "Cold Brew Coffee", "price": 5.0, "desc": "" }
+    ]
+  },
+  {
+    "id": "drinks-desserts",
+    "label": "Shakes & Desserts",
+    "items": [
+      { "name": "Milkshakes", "price": 6.5, "desc": "Hand-spun, classic flavors." },
+      { "name": "Root Beer Float", "price": 4.5, "desc": "Vanilla ice cream + root beer." },
+      { "name": "Alicia Lime Cream Parfait", "price": 6.0, "desc": "Sweet lime cream layered with vanilla wafers." }
+    ]
+  }
+]
