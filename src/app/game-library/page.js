@@ -2,6 +2,7 @@ import GameLibrary from "@/components/game-libary/GameLibrary";
 import Header from "@/components/header";
 
 
+BASE = process.env.NEXT_PUBLIC_BASE_PATH || 'http://localhost:3000'
 
 
 const Libary = () => {
@@ -15,7 +16,7 @@ const Libary = () => {
             <div className="h-screen w-full bg-fixed
             flex flex-col bg-center"
             style={{
-                backgroundImage:'url(images/castle_scene.png)'
+                backgroundImage:`url(${BASE}/images/castle_scene.png)`
             }}
             >
 
