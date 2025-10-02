@@ -4,6 +4,7 @@ import MMItems from "./header/mobile-menu-items";
 import { Button } from "./ui/button";
 import { useEffect, useState, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
 
 
@@ -61,7 +62,7 @@ const Header = () => {
             <div className="mx-auto py-5 flex items-center  
             px-4 sm:px-6 lg:px-8">
                 
-                <a className="w-10 h-10 
+                <Link className="w-10 h-10 
                 bg-center bg-contain"
                 href="/"
                 style={{
@@ -69,7 +70,7 @@ const Header = () => {
                 }}
                 >
 
-                </a>
+                </Link>
                 <a href="/" className="text-xl font-display text-background ml-3">
                     ABGC
                     <div className="w-full h-[1px] bg-white"/>
