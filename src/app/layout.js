@@ -2,14 +2,17 @@
 import "./globals.css";
 import { Montserrat_Alternates, Raleway } from "next/font/google";
 
-// ✅ Use next/font to avoid the warning about custom fonts
+// Explicit weights are required for these families
 const montserrat = Montserrat_Alternates({
   subsets: ["latin"],
+  weight: ["100","200","300","400","500","600","700","800","900"],
   variable: "--font-montserrat-alt",
   display: "swap",
 });
+
 const raleway = Raleway({
   subsets: ["latin"],
+  weight: ["100","200","300","400","500","600","700","800","900"],
   variable: "--font-raleway",
   display: "swap",
 });
@@ -34,9 +37,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`scrollbar-minimal ${montserrat.variable} ${raleway.variable}`}
     >
-      <head>
-        {/* next/font handles font loading; no need for <link> tags */}
-      </head>
+      <head>{/* next/font handles loading; no <link> tags needed */}</head>
       <body className="antialiased bg-primary">{children}</body>
     </html>
   );
