@@ -5,17 +5,7 @@ import { ChevronRight, MapPin } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
-// ✅ Never default to localhost in production builds
-const BASE =
-  process.env.NEXT_PUBLIC_BASE_PATH && process.env.NEXT_PUBLIC_BASE_PATH !== "/"
-    ? process.env.NEXT_PUBLIC_BASE_PATH
-    : ""; // empty string works for both local root and Pages when using next/image
-
-// Replace <img> + inline background URLs with <Image /> so Next.js handles basePath.
-// For true "background image" sections, use an absolutely-positioned <Image fill />
-
-
-
+// No BASE here — next/image will automatically apply basePath from next.config.mjs.
 
 const Tag = ({ children }) => (
   <span className="inline-flex items-center rounded-full border border-zinc-300/70 bg-white px-3 py-1 text-xs font-medium text-zinc-700 shadow-[0_1px_0_rgba(0,0,0,.04)]">
@@ -23,17 +13,17 @@ const Tag = ({ children }) => (
   </span>
 );
 
-// ✅ Polaroid now uses next/image (LCP + basePath safe)
 const Polaroid = ({ src, alt, caption, rotate = "rotate-0", className = "" }) => (
   <figure className={`relative ${rotate} ${className}`}>
     <div className="bg-white p-2 rounded-[14px] shadow-[0_12px_30px_rgba(0,0,0,.18)] ring-1 ring-zinc-900/5">
       <div className="relative aspect-[4/3] w-full rounded-[10px] overflow-hidden">
         <Image
-          src={src} // use root-relative like "/images/foo.png" when basePath is set in next.config
+          src={src}           // pass root-relative paths like "/images/foo.png"
           alt={alt}
           fill
           sizes="(max-width: 768px) 100vw, 600px"
           priority={false}
+          style={{ objectFit: "cover" }}
         />
       </div>
       {caption && (
