@@ -1,4 +1,5 @@
 // app/layout.js
+import { withPrefix } from "@/lib/prefix";
 import "./globals.css";
 import { Montserrat_Alternates, Raleway } from "next/font/google";
 
@@ -32,9 +33,9 @@ export const metadata = {
   icons: {
     // Root-relative is fine; Next will resolve using metadataBase
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: withPrefix("/favicon.ico") },
+      { url: withPrefix("/favicon.png"), sizes: "32x32", type: "image/png" },
+      { url: withPrefix("/favicon.svg"), type: "image/svg+xml" },
     ],
     apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
     shortcut: "/favicon.ico",
