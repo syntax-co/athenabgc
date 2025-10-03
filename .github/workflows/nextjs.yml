@@ -67,17 +67,7 @@ jobs:
           NEXT_PUBLIC_SITE_URL:  ${{ vars.NEXT_PUBLIC_SITE_URL }}
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
-      - name: Inspect built HTML for image paths
-        run: |
-          echo "Looking for un-prefixed image URLs..."
-          if ls out >/dev/null 2>&1; then ROOT=out; else ROOT=.next; fi
-          grep -RhoE 'src="/images/[^"]+' "$ROOT" | sort | uniq | sed 's/^/UNPREFIXED: /' || true
-          grep -RhoE 'src="/[^"]+images/[^"]+' "$ROOT" | grep '/athenabgc/' | sort | uniq | sed 's/^/OK (prefixed): /' || true
-
-            - name: Upload artifact
-              uses: actions/upload-pages-artifact@v3
-              with:
-                path: ./out
+      
 
   deploy:
     environment:
