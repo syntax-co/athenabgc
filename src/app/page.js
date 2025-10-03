@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, MapPin } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-
+ 
 // No BASE here — next/image will automatically apply basePath from next.config.mjs.
 
 const Tag = ({ children }) => (
@@ -78,8 +78,8 @@ export default function AthenaLandingPage() {
 
       {/* Shop / Library — left image panel now uses <Image /> instead of CSS background */}
       <section className="h-screen bg-primary flex items-center snap-center snap-always">
-        <div className="relative h-full w-full md:w-full lg:w-1/3 xl:w-1/3" style={{ boxShadow: "6px 6px 10px #1d1d1d48" }}>
-          <Image
+        <div className="relative h-full w-full md:w-full lg:w-1/3 xl:w-1/3 " style={{ boxShadow: "6px 6px 10px #1d1d1d48" }}>
+          <Image className=""
             src="/images/library.png"
             alt="Game library shelves"
             fill
@@ -92,7 +92,7 @@ export default function AthenaLandingPage() {
           <div className="flex flex-col items-center justify-center h-full lg:hidden xl:hidden relative z-10">
             {/* ... unchanged ... */}
           </div>
-        </div>
+        </div>  
 
         {/* right column ... unchanged ... */}
       </section>
