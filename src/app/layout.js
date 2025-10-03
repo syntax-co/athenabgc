@@ -2,7 +2,6 @@
 import "./globals.css";
 import { Montserrat_Alternates, Raleway } from "next/font/google";
 
-// Explicit weights are required for these families
 const montserrat = Montserrat_Alternates({
   subsets: ["latin"],
   weight: ["100","200","300","400","500","600","700","800","900"],
@@ -17,10 +16,22 @@ const raleway = Raleway({
   display: "swap",
 });
 
+// Read from your build env (the workflow already sets this), fall back to your Pages URL:
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://syntax-co.github.io/athenabgc";
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "/athenabgc";
+
 export const metadata = {
   title: "Athena Gaming Cafe",
   description: "",
+  metadataBase: new URL(SITE_URL), // ✅ critical for Pages
+
+  // If you have social images, make them basePath-aware:
+  // openGraph: { images: [`${BASE_PATH}/og-cover.jpg`] },
+  // twitter: { images: [`${BASE_PATH}/og-cover.jpg`] },
+
   icons: {
+    // Root-relative is fine; Next will resolve using metadataBase
     icon: [
       { url: "/favicon.ico" },
       { url: "/favicon.png", sizes: "32x32", type: "image/png" },
@@ -37,7 +48,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`scrollbar-minimal ${montserrat.variable} ${raleway.variable}`}
     >
-      <head>{/* next/font handles loading; no <link> tags needed */}</head>
+      <head>{/* next/font handles loading */}</head>
       <body className="antialiased bg-primary">{children}</body>
     </html>
   );
