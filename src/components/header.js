@@ -82,7 +82,9 @@ const Header = () => {
                         const _item = navitems[item]
                         return(
                             <a key={dex} 
-                            className="px-3 py-2 text-sm xl:text-base hover:underline underline-offset-4" href={_item.path}>
+                            className="px-3 py-2 text-sm xl:text-base hover:underline underline-offset-4" href={_item.path}
+                            onClick={() => {console.log(_item.path)}}
+                            >
                                 {_item.label}
                             </a>
                         )
