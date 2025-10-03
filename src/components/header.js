@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { useEffect, useState, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { withPrefix } from "@/lib/prefix";
 
 
 
@@ -12,16 +13,16 @@ import Link from "next/link";
 
 const Header = () => {
     const links = {
-        gamesForPlaying: "/game-library",
+        gamesForPlaying: withPrefix("/game-library"),
         gamesForPurchase: "https://athena-board-game-cafe.square.site/",
-        menu: "/menu",
+        menu: withPrefix("/menu"),
         reservations: "https://www.athenabgc.com/reservations",
         giftCards: "https://www.athenabgc.com/gift-cards",
         takeout: "https://athenabgc.getbento.com/",
         byob: "https://www.athenabgc.com/byob",
         instagram: "https://instagram.com/athenabgc",
         facebook: "https://facebook.com/athenabgc",
-        events:"/events",
+        events:withPrefix("/events"),
         aboutUs:""
     };
     
