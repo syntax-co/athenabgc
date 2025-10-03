@@ -24,7 +24,7 @@ const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "/athenabgc";
 export const metadata = {
   title: "Athena Gaming Cafe",
   description: "",
-  metadataBase: new URL(SITE_URL), // ✅ critical for Pages
+  metadataBase: new URL(BASE_PATH), // ✅ critical for Pages
 
   // If you have social images, make them basePath-aware:
   // openGraph: { images: [`${BASE_PATH}/og-cover.jpg`] },
