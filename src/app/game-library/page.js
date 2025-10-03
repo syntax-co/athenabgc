@@ -20,7 +20,7 @@ export default function Library() {
           style={{ objectFit: "cover" }}
         />
         <div
-          className="text-background font-display mt-auto flex justify-center
+          className="text-background font-display mt-auto flex justify-center relative
                      text-[20vw] md:text-[16vw] lg:text-[13vw] xl:text-[10vw]"
         >
           <div className="w-5/6">Games</div>

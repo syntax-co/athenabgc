@@ -22,7 +22,7 @@ const INITIAL_EVENTS = [
     title: "Open Play Night",
     start: "2025-10-01T19:00:00.000Z",
     location: "Athena Board Game Café",
-    url: "/events/open-play-night",
+    url: "",
     tags: ["community", "casual"],
     description: "Drop in and play from our library."
   },
@@ -31,7 +31,7 @@ const INITIAL_EVENTS = [
     title: "Cozy RPG One-Shot",
     start: "2025-10-04T18:30:00.000Z",
     location: "Back Room",
-    url: "/events/cozy-rpg",
+    url: "",
     tags: ["rpg"],
     description: "Beginner-friendly roleplaying session."
   },
