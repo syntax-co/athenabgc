@@ -67,7 +67,7 @@ const Header = () => {
                 bg-center bg-contain"
                 href="/"
                 style={{
-                    backgroundImage:'url(/images/athena-icon.png)'
+                    backgroundImage:`url(${withPrefix('/images/athena-icon.png')})`
                 }}
                 >
 

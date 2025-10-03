@@ -1,6 +1,7 @@
 "use client";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { withPrefix } from "@/lib/prefix";
 
 export default function GameCard({ game }) {
   return (
@@ -8,7 +9,7 @@ export default function GameCard({ game }) {
       {
         game.image? (
           <div className="h-[65%] w-full ">
-            <img src={game.image} alt={game.title} className="w-full h-full object-contain" loading="lazy" />
+            <img src={withPrefix(game.image)} alt={game.title} className="w-full h-full object-contain" loading="lazy" />
           </div>
         ) : (
           <div className="aspect-[4/3] bg-muted grid place-items-center text-xs text-muted-foreground">

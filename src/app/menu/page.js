@@ -1,5 +1,6 @@
 import Header from "@/components/header";
 import menuData from "@/json_files/menu.json";
+import { withPrefix } from "@/lib/prefix";
 
 export default function AbgcMenuPage() {
   const categories = menuData;
@@ -12,7 +13,7 @@ export default function AbgcMenuPage() {
         <div className="h-[80vh] w-full bg-fixed
             flex flex-col bg-center bg-cover"
             style={{
-                backgroundImage:'url(images/tavern.png)'
+                backgroundImage:`url(${withPrefix('images/tavern.png')})`
             }}
             >
 
