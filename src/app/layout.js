@@ -19,7 +19,6 @@ const raleway = Raleway({
 // Read from your build env (the workflow already sets this), fall back to your Pages URL:
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://syntax-co.github.io/athenabgc";
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "/athenabgc";
 
 export const metadata = {
   title: "Athena Gaming Cafe",
