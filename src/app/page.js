@@ -3,7 +3,7 @@ import Header from "@/components/header";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, MapPin } from "lucide-react";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
  
 // No BASE here — next/image will automatically apply basePath from next.config.mjs.
 
@@ -49,6 +49,11 @@ export default function AthenaLandingPage() {
     }
     window.location.href = `https://www.google.com/maps/search/?api=1&query=${address}`;
   };
+
+  useEffect(() => {
+    console.log(process.env.NEXT_PUBLIC_BASE_PATH)
+    console.log(process.env.NEXT_PUBLIC_SITE_URL)
+  }, []);
 
   return (
     <main className="h-screen overflow-y-auto snap-y snap-mandatory text-zinc-900 selection:bg-amber-200/60 scroll-smooth scrollbar-minimal">
