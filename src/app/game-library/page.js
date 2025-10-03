@@ -1,6 +1,7 @@
 // src/app/game-library/page.js (or wherever this file lives)
 import GameLibrary from "@/components/game-libary/GameLibrary";
 import Header from "@/components/header";
+import { withPrefix } from "@/lib/prefix";
 import Image from "next/image";
 
 export default function Library() {
@@ -11,7 +12,7 @@ export default function Library() {
       {/* Hero background via next/image (no BASE needed) */}
       <section className="relative h-screen w-full flex flex-col bg-center bg-fixed overflow-hidden">
         <Image
-          src="/images/castle_scene.png"
+          src={withPrefix("/images/castle_scene.png")}
           alt=""
           fill
           sizes="100vw"
