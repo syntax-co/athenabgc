@@ -98,7 +98,8 @@ const Header = () => {
                 </nav>
                 
                 <div 
-                  className='md:hidden rounded-md bg-transparent font-medium text-white relative '
+                  className='md:hidden rounded-md bg-transparent font-medium text-white relative 
+                  ml-auto'
                   onClick={toggleMenu}
                   ref={menuRef}
                 >
