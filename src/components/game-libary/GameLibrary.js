@@ -77,8 +77,7 @@ export default function GameLibrary() {
 
   const changePage = (newpage) => {
     setPage(newpage)
-
-    window.scrollTo(0,0)
+    
   }
 
 
