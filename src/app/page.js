@@ -91,7 +91,7 @@ export default function AthenaLandingPage() {
       {/* Hero: editorial headline + collage */}
       <section
         className="h-screen relative z-10 bg-cover bg-no-repeat bg-bottom bg-fixed flex flex-col snap-start"
-        style={{ backgroundImage: `url(${withPrefix('/images/athena-background-2.png')})` }}
+        style={{ backgroundImage: `url(${withPrefix('/images/athena-background-2.webp')})` }}
       >
         <div className="w-full  mt-auto px-16 
         flex items-center justify-center space-x-[6vw] font-display text-background
@@ -116,7 +116,7 @@ export default function AthenaLandingPage() {
           "
           style={{
             boxShadow: "6px 6px 10px #1d1d1d48",
-            backgroundImage: `url(${withPrefix('/images/library.png')})`,
+            backgroundImage: `url(${withPrefix('/images/library.webp')})`,
           }}
         >
 
@@ -231,7 +231,7 @@ export default function AthenaLandingPage() {
       <section
         className="h-screen  bg-cover bg-fixed flex items-center snap-start"
       style={{
-        backgroundImage:`url(${withPrefix('/images/castle_valley_scene.png')})`
+        backgroundImage:`url(${withPrefix('/images/castle_valley_scene.webp')})`
       }}
       >
         <div className="h-5/6 md:h-5/6 lg:h-4/6 xl:h-4/6 
