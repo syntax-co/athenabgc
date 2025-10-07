@@ -12,7 +12,7 @@ export default function Library() {
       {/* Hero background via next/image (no BASE needed) */}
       <section className="relative h-screen w-full flex flex-col bg-center bg-fixed overflow-hidden">
         <Image
-          src={withPrefix("/images/castle_scene.png")}
+          src={withPrefix("/images/castle_scene.webp")}
           alt=""
           fill
           sizes="100vw"
