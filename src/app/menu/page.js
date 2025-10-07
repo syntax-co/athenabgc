@@ -13,7 +13,7 @@ export default function AbgcMenuPage() {
         <div className="h-[80vh] w-full bg-fixed
             flex flex-col bg-center bg-cover"
             style={{
-                backgroundImage:`url(${withPrefix('images/tavern.png')})`
+                backgroundImage:`url(${withPrefix('images/tavern.webp')})`
             }}
             >
 
